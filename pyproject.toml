@@ -1,0 +1,37 @@
+[project]
+authors = []
+description = ""
+name = "livekit-playground"
+requires-python = "3.14.5"
+version = "0.0.1"
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+
+[tool.poetry]
+packages = [
+  {include = "livekit_playground", from = "src"},
+]
+
+[tool.poetry.dependencies]
+pydantic = "^2.13.4"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+autoflake = "^2.3.3"
+faker = "^40.21.0"
+mypy = "^2.1.0"
+pre-commit = "^4.6.0"
+pytest = "^9.0.3"
+pytest-asyncio = "^1.4.0"
+pytest-mock = "^3.15.1"
+python-dotenv = "^1.2.2"
+ruff = "^0.15.16"
+
+[tool.pytest.ini_options]
+python_files = ["test_*.py"]
+pythonpath = ["."]
+testpaths = ["tests"]

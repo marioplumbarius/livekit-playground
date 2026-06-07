@@ -1,0 +1,12 @@
+line-length = 120 # line-length 120 matches Black
+target-version = "py314"
+exclude = [".venv"]
+
+[lint]
+select = ["E", "F", "I", "C901", "PLR0915"]
+
+[lint.mccabe]
+max-complexity = 10
+
+[lint.pylint]
+max-statements = 50
