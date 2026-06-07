@@ -7,6 +7,7 @@ init_install_os_deps:
 	brew install direnv
 	brew install poetry
 	brew install pyenv
+	brew install livekit-cli
 
 init_setup_python:
 	[[ "$$(pyenv local)" == "$(PYTHON_VERSION)" ]] || pyenv install $(PYTHON_VERSION)
